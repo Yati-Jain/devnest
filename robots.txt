@@ -1,0 +1,11 @@
+# DevNest - robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://devnest.agency/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

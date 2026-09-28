@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>DevNest - Premium Tech Freelancing Agency | Web, App & IT Solutions</title>
+    <meta name="description" content="DevNest is a premium freelancing agency offering web development, app development, IT support, cloud solutions, cybersecurity, and full tech stack services. Get expert solutions at affordable prices.">
+    <meta name="keywords" content="freelancing agency, web development, app development, IT support, tech solutions, DevNest, hire developer, freelance developer">
+    <meta name="author" content="DevNest">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="DevNest - Premium Tech Freelancing Agency">
+    <meta property="og:description" content="Expert tech solutions - Web, App, Cloud, Security and more. Your one-stop freelancing agency for all tech needs.">
+    <meta property="og:image" content="https://devnest.agency/og-image.png">
+    <meta property="og:url" content="https://devnest.agency">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DevNest">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DevNest - Premium Tech Freelancing Agency">
+    <meta name="twitter:description" content="Expert tech solutions - Web, App, Cloud, Security and more.">
+    <meta name="twitter:image" content="https://devnest.agency/og-image.png">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%236C63FF'/><stop offset='100%25' style='stop-color:%23F093FB'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23g)'/><text x='50' y='65' font-size='45' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'>DN</text></svg>">
+
+    <link rel="canonical" href="https://devnest.agency">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --text-xs:   0.75rem;
+            --text-sm:   0.875rem;
+            --text-base: 1rem;
+            --text-lg:   1.125rem;
+            --text-xl:   1.25rem;
+            --text-2xl:  1.5rem;
+            --text-3xl:  2rem;
+            --text-4xl:  2.5rem;
+            --text-5xl:  3.5rem;
+
+            --c-text:              #2D2B55;
+            --c-text-muted:        #6B6899;
+            --c-text-inverse:      #FFFFFF;
+            --c-text-on-dark:      rgba(255, 255, 255, 0.8);
+            --c-text-on-dark-muted:rgba(255, 255, 255, 0.55);
+            --c-accent:            #6C63FF;
+            --c-success:           #4CAF50;
+            --c-error:             #FF5252;
+            --c-star:              #FFD700;
+            --c-warning:           #FF9800;
+
+            --r-sm:   8px;
+            --r-md:   12px;
+            --r-lg:   20px;
+            --r-xl:   30px;
+            --r-full: 50px;
+
+            --primary: #6C63FF;
+            --primary-light: #8B85FF;
+            --primary-dark: #5A52E0;
+            --secondary: #F093FB;
+            --accent: #4ECDC4;
+            --accent2: #FFD93D;
+
+            --bg: #E8E4F0;
+            --bg-light: #F0ECF8;
+            --bg-dark: #D8D4E0;
+
+            --clay-shadow: 8px 8px 16px rgba(0,0,0,0.15), -4px -4px 12px rgba(255,255,255,0.8), inset 1px 1px 2px rgba(255,255,255,0.5);
+            --clay-shadow-sm: 4px 4px 10px rgba(0,0,0,0.12), -2px -2px 8px rgba(255,255,255,0.7), inset 1px 1px 2px rgba(255,255,255,0.4);
+            --clay-shadow-lg: 12px 12px 24px rgba(0,0,0,0.18), -6px -6px 16px rgba(255,255,255,0.85), inset 2px 2px 4px rgba(255,255,255,0.6);
+            --clay-shadow-hover: 14px 14px 28px rgba(0,0,0,0.2), -7px -7px 18px rgba(255,255,255,0.9), inset 2px 2px 4px rgba(255,255,255,0.7);
+            --clay-inset: inset 4px 4px 10px rgba(0,0,0,0.15), inset -2px -2px 8px rgba(255,255,255,0.6);
+
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--c-text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            min-height: 100vh;
+            transition: padding-bottom 0.3s ease;
+        }
+
+        body.cookie-visible { padding-bottom: 120px; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 100px 0; }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(var(--text-3xl), 5vw, var(--text-4xl));
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+            color: var(--c-text);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--c-text-muted);
+            font-size: var(--text-lg);
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .sr-only {
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+            overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+        }
+
+        /* Clay Cards */
+        .clay {
+            background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+            backdrop-filter: blur(10px);
+            border-radius: var(--r-lg);
+            box-shadow: var(--clay-shadow);
+            border: 1px solid rgba(255,255,255,0.5);
+            transition: var(--transition);
+        }
+        .clay:hover { box-shadow: var(--clay-shadow-hover); transform: translateY(-4px); }
+
+        .clay-static {
+            background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+            backdrop-filter: blur(10px);
+            border-radius: var(--r-lg);
+            box-shadow: var(--clay-shadow);
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+
+        .clay-inset {
+            background: linear-gradient(135deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01));
+            border-radius: var(--r-md);
+            box-shadow: var(--clay-inset);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px; border-radius: var(--r-full);
+            font-weight: 600; font-size: var(--text-base);
+            cursor: pointer; text-decoration: none;
+            transition: var(--transition); border: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--c-text-inverse);
+            box-shadow: 4px 4px 12px rgba(108,99,255,0.4), -2px -2px 8px rgba(255,255,255,0.3), inset 1px 1px 2px rgba(255,255,255,0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 6px 6px 20px rgba(108,99,255,0.5), -3px -3px 10px rgba(255,255,255,0.4), inset 1px 1px 2px rgba(255,255,255,0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+            color: var(--c-accent);
+            box-shadow: var(--clay-shadow-sm);
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--clay-shadow);
+            background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            box-shadow: 4px 4px 12px rgba(37,211,102,0.4), -2px -2px 8px rgba(255,255,255,0.3), inset 1px 1px 2px rgba(255,255,255,0.3);
+        }
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 6px 6px 20px rgba(37,211,102,0.5), -3px -3px 10px rgba(255,255,255,0.4);
+        }
+
+        /* Loader */
+        #loader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg); display: flex; align-items: center;
+            justify-content: center; z-index: 99999;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+        #loader.hidden { opacity: 0; visibility: hidden; }
+        .loader-content { text-align: center; }
+        .loader-logo {
+            width: 80px; height: 80px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; animation: pulse 1.5s ease-in-out infinite;
+            box-shadow: var(--clay-shadow-lg);
+        }
+        .loader-logo span { color: white; font-size: var(--text-xl); font-weight: 800; font-family: 'Space Grotesk', sans-serif; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+        .loader-bar { width: 200px; height: 6px; background: var(--bg-dark); border-radius: 3px; overflow: hidden; margin: 0 auto; box-shadow: var(--clay-inset); }
+        .loader-bar-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--secondary)); border-radius: 3px; animation: loading 1.5s ease-in-out; width: 100%; }
+        @keyframes loading { 0% { width: 0; } 100% { width: 100%; } }
+
+        /* Navbar */
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 12px 0; transition: var(--transition); }
+        .navbar.scrolled { background: rgba(232, 228, 240, 0.9); backdrop-filter: blur(20px); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .nav-logo-icon {
+            width: 44px; height: 44px; border-radius: var(--r-md);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: var(--clay-shadow-sm);
+        }
+        .nav-logo-icon span { color: white; font-weight: 800; font-size: var(--text-base); font-family: 'Space Grotesk', sans-serif; }
+        .nav-logo-text { font-family: 'Space Grotesk', sans-serif; font-size: var(--text-2xl); font-weight: 700; color: var(--c-text); }
+
+        .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--c-text); font-weight: 500; padding: 8px 16px; border-radius: var(--r-md); transition: var(--transition); font-size: var(--text-sm); }
+        .nav-links a:hover, .nav-links a.active { background: rgba(108,99,255,0.1); color: var(--c-accent); }
+
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; z-index: 1001; }
+        .hamburger span { width: 28px; height: 3px; background: var(--c-text); border-radius: 2px; transition: var(--transition); }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+        /* Mobile Nav */
+        .mobile-nav {
+            display: none; position: fixed; top: 0; right: -100%;
+            width: 80%; max-width: 360px; height: 100vh;
+            background: var(--bg); z-index: 999; padding: 100px 30px 30px;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -10px 0 30px rgba(0,0,0,0.1); overflow-y: auto;
+        }
+        .mobile-nav.active { right: 0; }
+        .mobile-nav a { display: block; padding: 14px 20px; text-decoration: none; color: var(--c-text); font-weight: 500; font-size: var(--text-lg); border-radius: var(--r-md); margin-bottom: 8px; transition: var(--transition); }
+        .mobile-nav a:hover { background: rgba(108,99,255,0.1); color: var(--c-accent); }
+
+        .mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); z-index: 998; opacity: 0; transition: opacity 0.3s; }
+        .mobile-overlay.active { opacity: 1; }
+
+        /* Hero */
+        .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 0 80px; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(108,99,255,0.15), transparent); pointer-events: none; }
+        .hero::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(240,147,251,0.12), transparent); pointer-events: none; }
+
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 8px 20px; border-radius: var(--r-full);
+            background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(240,147,251,0.1));
+            box-shadow: var(--clay-shadow-sm); margin-bottom: 24px;
+            font-size: var(--text-sm); font-weight: 600; color: var(--c-accent);
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(var(--text-4xl), 6vw, var(--text-5xl)); font-weight: 800; line-height: 1.15; margin-bottom: 24px; }
+        .hero p { font-size: var(--text-lg); color: var(--c-text-muted); margin-bottom: 36px; max-width: 520px; }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+        .hero-visual { display: flex; justify-content: center; align-items: center; position: relative; }
+        .hero-card-main { width: 100%; max-width: 420px; padding: 40px; text-align: center; position: relative; }
+
+        .hero-card-main .code-window { background: var(--c-text); border-radius: var(--r-md); padding: 20px; text-align: left; margin-bottom: 20px; box-shadow: var(--clay-inset); }
+        .code-window .dots { display: flex; gap: 6px; margin-bottom: 16px; }
+        .code-window .dot { width: 10px; height: 10px; border-radius: 50%; }
+        .code-window .dot:nth-child(1) { background: #FF5F56; }
+        .code-window .dot:nth-child(2) { background: #FFBD2E; }
+        .code-window .dot:nth-child(3) { background: #27C93F; }
+        .code-window code { font-family: 'Courier New', monospace; font-size: var(--text-sm); color: #A5B4FC; line-height: 1.8; }
+        .code-window .keyword { color: #C084FC; }
+        .code-window .string { color: #86EFAC; }
+        .code-window .function { color: #93C5FD; }
+        .code-window .comment { color: #6B7280; }
+
+        .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .hero-stat {
+            padding: 12px; text-align: center; border-radius: var(--r-md);
+            background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+            box-shadow: var(--clay-shadow-sm); border: 1px solid rgba(255,255,255,0.4);
+        }
+        .hero-stat strong { display: block; font-size: var(--text-xl); font-weight: 700; color: var(--c-accent); }
+        .hero-stat span { font-size: var(--text-xs); color: var(--c-text-muted); }
+
+        .floating-shape { position: absolute; border-radius: 50%; opacity: 0.6; animation: float 6s ease-in-out infinite; }
+        .floating-shape:nth-child(1) { width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary), var(--secondary)); top: -20px; right: -10px; animation-delay: 0s; box-shadow: var(--clay-shadow-sm); }
+        .floating-shape:nth-child(2) { width: 40px; height: 40px; background: linear-gradient(135deg, var(--accent), var(--accent2)); bottom: 20px; left: -20px; animation-delay: 2s; box-shadow: var(--clay-shadow-sm); }
+        .floating-shape:nth-child(3) { width: 30px; height: 30px; background: linear-gradient(135deg, var(--accent2), var(--secondary)); top: 40%; right: -30px; animation-delay: 4s; box-shadow: var(--clay-shadow-sm); }
+        @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 33% { transform: translateY(-15px) rotate(5deg); } 66% { transform: translateY(10px) rotate(-3deg); } }
+
+        /* Services */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .service-card { padding: 36px; position: relative; overflow: hidden; }
+        .service-icon { width: 64px; height: 64px; border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; font-size: var(--text-xl); margin-bottom: 20px; box-shadow: var(--clay-shadow-sm); }
+        .service-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: var(--text-xl); font-weight: 700; margin-bottom: 12px; }
+        .service-card p { color: var(--c-text-muted); font-size: var(--text-base); margin-bottom: 16px; }
+        .service-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .service-tag { padding: 4px 12px; border-radius: var(--r-full); font-size: var(--text-xs); font-weight: 500; background: linear-gradient(135deg, rgba(108,99,255,0.1), rgba(240,147,251,0.05)); color: var(--c-accent); box-shadow: var(--clay-shadow-sm); border: 1px solid rgba(255,255,255,0.4); }
+
+        /* Service Icon SVGs */
+        .service-icon svg { width: 28px; height: 28px; fill: none; stroke: white; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+        /* Portfolio */
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
+        .portfolio-card { overflow: hidden; }
+        .portfolio-image { height: 220px; background-size: cover; background-position: center; border-radius: var(--r-lg) var(--r-lg) 0 0; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .portfolio-image::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; background: linear-gradient(transparent, rgba(45,43,85,0.8)); }
+        .portfolio-badge { position: absolute; top: 16px; right: 16px; padding: 6px 14px; border-radius: var(--r-full); font-size: var(--text-xs); font-weight: 600; z-index: 1; box-shadow: var(--clay-shadow-sm); }
+        .badge-live { background: linear-gradient(135deg, var(--c-success), #66BB6A); color: white; }
+        .portfolio-content { padding: 24px; }
+        .portfolio-content h3 { font-family: 'Space Grotesk', sans-serif; font-size: var(--text-xl); font-weight: 700; margin-bottom: 8px; }
+        .portfolio-content p { color: var(--c-text-muted); font-size: var(--text-base); margin-bottom: 16px; }
+
+        .stars { display: flex; gap: 2px; margin-bottom: 12px; align-items: center; }
+        .star { color: var(--c-star); font-size: var(--text-lg); }
+        .star svg { width: 18px; height: 18px; fill: var(--c-star); }
+        .stars-label { font-size: var(--text-sm); color: var(--c-text-muted); margin-left: 8px; }
+
+        .portfolio-tech { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+        .portfolio-tech span { padding: 4px 10px; border-radius: var(--r-sm); font-size: var(--text-xs); font-weight: 500; background: rgba(108,99,255,0.1); color: var(--c-accent); }
+        .portfolio-tech span:nth-child(n+4) { display: none; }
+        .portfolio-tech[data-more]::after { content: attr(data-more); padding: 4px 10px; border-radius: var(--r-sm); font-size: var(--text-xs); font-weight: 500; background: rgba(108,99,255,0.1); color: var(--c-accent); }
+
+        .review-text {
+            padding: 16px; border-radius: var(--r-md);
+            background: rgba(108,99,255,0.05); box-shadow: var(--clay-inset);
+            font-style: italic; font-size: var(--text-sm); color: var(--c-text-muted);
+            margin-top: 12px;
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+        }
+        .review-text:hover, .review-text:focus-within { -webkit-line-clamp: unset; }
+        .review-author { font-style: normal; font-weight: 600; color: var(--c-text); margin-top: 8px; font-size: var(--text-sm); }
+
+        /* Testimonials */
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .testimonial-card { padding: 32px; }
+        .testimonial-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+        .testimonial-avatar { width: 50px; height: 50px; border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: var(--text-lg); color: white; box-shadow: var(--clay-shadow-sm); }
+        .testimonial-info h3 { font-weight: 600; font-size: var(--text-base); }
+        .testimonial-info span { font-size: var(--text-sm); color: var(--c-text-muted); }
+        .testimonial-card p { color: var(--c-text-muted); font-size: var(--text-base); line-height: 1.7; }
+        .testimonial-card .stars { margin-top: 0; }
+
+        /* Process */
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+        .process-card { padding: 32px; text-align: center; position: relative; }
+        .process-number { width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: var(--text-xl); margin: 0 auto 16px; box-shadow: var(--clay-shadow-sm); }
+        .process-card h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin-bottom: 10px; }
+        .process-card p { color: var(--c-text-muted); font-size: var(--text-sm); }
+
+        /* Pricing */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .pricing-card { padding: 36px; text-align: center; position: relative; }
+        .pricing-card.featured { border: 2px solid var(--primary); transform: scale(1.05); }
+        .pricing-card.featured::before { content: 'Most Popular'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); padding: 4px 20px; border-radius: var(--r-full); background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; font-size: var(--text-xs); font-weight: 600; box-shadow: var(--clay-shadow-sm); }
+        .pricing-icon { margin-bottom: 16px; }
+        .pricing-icon svg { width: 48px; height: 48px; }
+        .pricing-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: var(--text-2xl); font-weight: 700; margin-bottom: 8px; }
+        .pricing-price { font-size: var(--text-4xl); font-weight: 800; color: var(--c-accent); margin-bottom: 4px; }
+        .pricing-price span { font-size: var(--text-base); font-weight: 400; color: var(--c-text-muted); }
+        .pricing-desc { color: var(--c-text-muted); font-size: var(--text-sm); margin-bottom: 24px; }
+        .pricing-features { list-style: none; text-align: left; margin-bottom: 28px; }
+        .pricing-features li { padding: 8px 0; font-size: var(--text-base); display: flex; align-items: center; gap: 10px; color: var(--c-text); }
+        .pricing-features li::before { content: ''; width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg, rgba(76,175,80,0.2), rgba(76,175,80,0.1)); display: flex; align-items: center; justify-content: center; flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234CAF50' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; }
+
+        /* Blog */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
+        .blog-card { overflow: hidden; }
+        .blog-image { height: 200px; border-radius: var(--r-lg) var(--r-lg) 0 0; display: flex; align-items: center; justify-content: center; position: relative; }
+        .blog-image svg { width: 48px; height: 48px; stroke: white; fill: none; stroke-width: 1.5; position: relative; z-index: 1; }
+        .blog-content { padding: 24px; }
+        .blog-meta { display: flex; gap: 16px; margin-bottom: 12px; font-size: var(--text-sm); color: var(--c-text-muted); }
+        .blog-content h3 { font-family: 'Space Grotesk', sans-serif; font-size: var(--text-xl); font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
+        .blog-content p { color: var(--c-text-muted); font-size: var(--text-sm); margin-bottom: 16px; }
+        .blog-link { color: var(--c-accent); font-weight: 600; text-decoration: none; font-size: var(--text-base); transition: var(--transition); }
+        .blog-link:hover { color: var(--primary-dark); }
+
+        /* Contact */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .contact-form { padding: 40px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: var(--text-base); color: var(--c-text); }
+        .form-group label .required { color: var(--c-error); }
+        .form-input {
+            width: 100%; padding: 14px 18px; border: 2px solid transparent;
+            border-radius: var(--r-md); background: linear-gradient(135deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01));
+            box-shadow: var(--clay-inset); font-family: 'Inter', sans-serif;
+            font-size: var(--text-base); color: var(--c-text); transition: var(--transition); outline: none;
+        }
+        .form-input:focus { border-color: var(--primary); box-shadow: var(--clay-inset), 0 0 0 3px rgba(108,99,255,0.15); }
+        .form-input.error { border-color: var(--c-error); box-shadow: var(--clay-inset), 0 0 0 3px rgba(255,82,82,0.15); }
+        .form-input.success { border-color: var(--c-success); }
+        .form-error { color: var(--c-error); font-size: var(--text-sm); margin-top: 6px; display: none; }
+        .form-input.error + .form-error { display: block; }
+        textarea.form-input { min-height: 120px; resize: vertical; }
+        .honeypot { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; overflow: hidden; }
+
+        .contact-info { padding: 40px; }
+        .contact-info > h3 { font-family: 'Space Grotesk', sans-serif; font-size: var(--text-2xl); font-weight: 700; margin-bottom: 20px; }
+        .contact-info > p { color: var(--c-text-muted); margin-bottom: 32px; }
+        .contact-item {
+            display: flex; align-items: center; gap: 16px; margin-bottom: 24px;
+            padding: 16px; border-radius: var(--r-md);
+            background: rgba(255,255,255,0.2); box-shadow: var(--clay-shadow-sm);
+            border: 1px solid rgba(255,255,255,0.4); transition: var(--transition);
+            text-decoration: none; color: var(--c-text);
+        }
+        .contact-item:hover { transform: translateX(6px); box-shadow: var(--clay-shadow); }
+        .contact-item-icon { width: 48px; height: 48px; border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--clay-shadow-sm); }
+        .contact-item-icon svg { width: 22px; height: 22px; stroke: white; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .contact-item-text h3 { font-size: var(--text-base); font-weight: 600; font-family: 'Inter', sans-serif; }
+        .contact-item-text span { font-size: var(--text-sm); color: var(--c-text-muted); }
+
+        /* CTA */
+        .cta-section { padding: 80px 0; }
+        .cta-card {
+            padding: 60px 40px; text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--r-xl); color: white; position: relative;
+            overflow: hidden; box-shadow: var(--clay-shadow-lg);
+        }
+        .cta-card::before { content: ''; position: absolute; top: -50%; right: -30%; width: 400px; height: 400px; border-radius: 50%; background: rgba(255,255,255,0.08); }
+        .cta-card::after { content: ''; position: absolute; bottom: -40%; left: -20%; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+        .cta-card h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); font-weight: 700; margin-bottom: 16px; position: relative; z-index: 1; }
+        .cta-card p { font-size: var(--text-lg); opacity: 0.9; margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; position: relative; z-index: 1; }
+        .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; position: relative; z-index: 1; }
+        .btn-cta-white { background: white; color: var(--c-accent); padding: 16px 36px; border-radius: var(--r-full); font-weight: 700; font-size: var(--text-base); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: var(--transition); }
+        .btn-cta-white:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        .btn-cta-outline { background: rgba(255,255,255,0.15); color: white; border: 2px solid rgba(255,255,255,0.3); padding: 16px 36px; border-radius: var(--r-full); font-weight: 700; font-size: var(--text-base); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: var(--transition); }
+        .btn-cta-outline:hover { background: rgba(255,255,255,0.25); transform: translateY(-3px); }
+
+        /* Footer */
+        .footer { background: var(--c-text); color: var(--c-text-on-dark); padding: 60px 0 20px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand p { margin-top: 16px; font-size: var(--text-sm); line-height: 1.7; color: var(--c-text-on-dark-muted); }
+        .footer h3 { color: var(--c-text-inverse); font-family: 'Space Grotesk', sans-serif; font-weight: 600; margin-bottom: 20px; font-size: var(--text-lg); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: var(--c-text-on-dark-muted); text-decoration: none; transition: var(--transition); font-size: var(--text-sm); }
+        .footer-links a:hover { color: var(--c-text-inverse); padding-left: 4px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: var(--text-sm); color: var(--c-text-on-dark-muted); }
+        .footer-bottom a { color: var(--c-text-on-dark-muted); text-decoration: none; transition: var(--transition); }
+        .footer-bottom a:hover { color: var(--c-text-inverse); }
+        .footer-bottom-links { display: flex; gap: 24px; }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed !important; bottom: 24px !important; right: 24px !important;
+            width: 60px; height: 60px; border-radius: 50%;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            display: flex; align-items: center; justify-content: center;
+            color: white; text-decoration: none; z-index: 9990;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+            transition: var(--transition); animation: wa-pulse 2s infinite;
+        }
+        .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.6); }
+        @keyframes wa-pulse { 0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); } 50% { box-shadow: 0 4px 20px rgba(37,211,102,0.5), 0 0 0 10px rgba(37,211,102,0.1); } }
+
+        /* Cookie Banner */
+        .cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: var(--c-text); color: white; padding: 20px; z-index: 9999; transform: translateY(100%); transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); max-height: 25vh; overflow-y: auto; }
+        .cookie-banner.show { transform: translateY(0); }
+        .cookie-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+        .cookie-text { flex: 1; font-size: var(--text-sm); color: var(--c-text-on-dark); }
+        .cookie-text a { color: var(--primary-light); text-decoration: underline; }
+        .cookie-buttons { display: flex; gap: 12px; }
+        .cookie-btn { padding: 10px 24px; border-radius: var(--r-full); border: none; cursor: pointer; font-weight: 600; font-size: var(--text-sm); transition: var(--transition); }
+        .cookie-accept { background: var(--primary); color: white; }
+        .cookie-decline { background: transparent; color: var(--c-text-on-dark); border: 1px solid rgba(255,255,255,0.3); }
+
+        /* Scroll Top */
+        .scroll-top {
+            position: fixed !important; bottom: 96px !important; right: 24px !important;
+            width: 46px; height: 46px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white; border: none; cursor: pointer; z-index: 9990;
+            opacity: 0; visibility: hidden; transition: var(--transition);
+            box-shadow: var(--clay-shadow-sm); display: flex; align-items: center; justify-content: center;
+        }
+        .scroll-top svg { width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+        .scroll-top.visible { opacity: 1; visibility: visible; }
+        .scroll-top:hover { transform: translateY(-3px); }
+
+        /* Modal */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 10000; display: none; align-items: center; justify-content: center; padding: 20px; }
+        .modal-overlay.active { display: flex; }
+        .modal { background: var(--bg); border-radius: var(--r-lg); max-width: 800px; width: 100%; max-height: 80vh; overflow-y: auto; padding: 40px; box-shadow: var(--clay-shadow-lg); position: relative; }
+        .modal-close { position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2)); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: var(--clay-shadow-sm); transition: var(--transition); }
+        .modal-close svg { width: 16px; height: 16px; stroke: var(--c-text); stroke-width: 2.5; fill: none; stroke-linecap: round; }
+        .modal-close:hover { transform: rotate(90deg); }
+        .modal h2 { font-family: 'Space Grotesk', sans-serif; font-size: var(--text-3xl); font-weight: 700; margin-bottom: 24px; }
+        .modal h3 { font-size: var(--text-lg); font-weight: 600; margin: 24px 0 12px; color: var(--c-accent); }
+        .modal p, .modal li { color: var(--c-text-muted); font-size: var(--text-base); margin-bottom: 12px; line-height: 1.7; }
+        .modal ul { padding-left: 20px; }
+        .modal li { margin-bottom: 8px; }
+
+        /* Toast */
+        .toast { position: fixed; top: 100px; right: 30px; padding: 16px 24px; border-radius: var(--r-md); color: white; font-weight: 600; z-index: 10001; transform: translateX(120%); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: var(--clay-shadow-lg); max-width: 360px; font-size: var(--text-sm); }
+        .toast.show { transform: translateX(0); }
+        .toast-success { background: linear-gradient(135deg, var(--c-success), #66BB6A); }
+        .toast-error { background: linear-gradient(135deg, var(--c-error), #FF7043); }
+
+        /* Marquee */
+        .tech-marquee { overflow: hidden; padding: 20px 0; margin: 40px 0; }
+        .marquee-track { display: flex; gap: 40px; animation: marquee 30s linear infinite; width: max-content; }
+        .marquee-item { padding: 12px 28px; border-radius: var(--r-md); background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1)); box-shadow: var(--clay-shadow-sm); border: 1px solid rgba(255,255,255,0.4); font-weight: 600; font-size: var(--text-sm); white-space: nowrap; color: var(--c-text); }
+        @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        /* Social */
+        .social-box { margin-top: 24px; padding: 20px; border-radius: var(--r-md); background: rgba(255,255,255,0.2); box-shadow: var(--clay-shadow-sm); border: 1px solid rgba(255,255,255,0.4); }
+        .social-box h3 { margin-bottom: 12px; font-size: var(--text-base); font-family: 'Inter', sans-serif; }
+        .social-links { display: flex; gap: 12px; flex-wrap: wrap; }
+        .social-links .btn { padding: 8px 16px; font-size: var(--text-sm); }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero p { margin-left: auto; margin-right: auto; }
+            .hero-buttons { justify-content: center; }
+            .hero-visual { order: -1; }
+            .hero-card-main { max-width: 360px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .pricing-card.featured { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .mobile-nav { display: block; }
+            .section { padding: 60px 0; }
+            .services-grid, .portfolio-grid, .blog-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .cookie-content { flex-direction: column; text-align: center; }
+            .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .process-grid { grid-template-columns: 1fr 1fr; }
+            .whatsapp-float { bottom: 20px !important; right: 20px !important; width: 54px; height: 54px; }
+            .whatsapp-float svg { width: 24px; height: 24px; }
+            .scroll-top { bottom: 84px !important; right: 20px !important; width: 40px; height: 40px; }
+        }
+
+        @media (max-width: 480px) {
+            .process-grid { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; justify-content: center; }
+        }
+
+        /* Animations */
+        .fade-up { opacity: 0; transform: translateY(40px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+        /* Skip Link */
+        .skip-link { position: absolute; top: -100px; left: 0; background: var(--primary); color: white; padding: 12px 24px; z-index: 100000; font-weight: 600; text-decoration: none; border-radius: 0 0 var(--r-sm) 0; transition: top 0.3s; }
+        .skip-link:focus { top: 0; }
+
+        body.keyboard-nav *:focus { outline: 3px solid var(--primary); outline-offset: 2px; }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Loader -->
+    <div id="loader" role="status" aria-label="Loading">
+        <div class="loader-content">
+            <div class="loader-logo"><span>DN</span></div>
+            <p style="margin-bottom:16px;font-weight:600;color:var(--c-text-muted)">Loading DevNest...</p>
+            <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="DevNest Home">
+                <div class="nav-logo-icon"><span>DN</span></div>
+                <span class="nav-logo-text">Dev<span class="gradient-text">Nest</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact" class="btn btn-primary" style="padding:8px 20px;font-size:var(--text-sm);">Get Quote</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-overlay" aria-hidden="true"></div>
+    <div class="mobile-nav" aria-label="Mobile navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#process">Process</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#blog">Blog</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <br>
+        <a href="https://wa.me/919549687691?text=Hi%20DevNest!%20I'm%20interested%20in%20your%20services." class="btn btn-whatsapp" style="text-align:center;display:block">WhatsApp Us</a>
+    </div>
+
+    <main id="main-content">
+
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="fade-up">
+                        <div class="hero-badge">Freelancing Agency</div>
+                        <h1>Build. Scale. <br><span class="gradient-text">Dominate.</span></h1>
+                        <p>DevNest is your premium tech partner. From stunning websites to powerful apps, cloud architecture to cybersecurity — we deliver world-class solutions that transform your business.</p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary" aria-label="Start your project with DevNest">
+                                Start Your Project
+                            </a>
+                            <a href="https://wa.me/919549687691?text=Hi%20DevNest!%20I%20want%20to%20discuss%20a%20project." class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                                WhatsApp Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual fade-up">
+                        <div class="hero-card-main clay-static" style="position:relative">
+                            <div class="floating-shape" aria-hidden="true"></div>
+                            <div class="floating-shape" aria-hidden="true"></div>
+                            <div class="floating-shape" aria-hidden="true"></div>
+                            <div class="code-window" aria-hidden="true">
+                                <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+                                <code>
+                                    <span class="comment">// DevNest Magic</span><br>
+                                    <span class="keyword">const</span> <span class="function">project</span> = {<br>
+                                    &nbsp;&nbsp;client: <span class="string">"Your Brand"</span>,<br>
+                                    &nbsp;&nbsp;quality: <span class="string">"Premium"</span>,<br>
+                                    &nbsp;&nbsp;delivery: <span class="string">"On Time"</span>,<br>
+                                    &nbsp;&nbsp;support: <span class="string">"24/7"</span><br>
+                                    };<br>
+                                    <span class="function">devNest</span>.<span class="keyword">build</span>(project);
+                                </code>
+                            </div>
+                            <div class="hero-stats">
+                                <div class="hero-stat"><strong>50+</strong><span>Projects</span></div>
+                                <div class="hero-stat"><strong>100%</strong><span>Happy</span></div>
+                                <div class="hero-stat"><strong>24/7</strong><span>Support</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Marquee -->
+        <div class="tech-marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-item">React</div>
+                <div class="marquee-item">Node.js</div>
+                <div class="marquee-item">Python</div>
+                <div class="marquee-item">WordPress</div>
+                <div class="marquee-item">React Native</div>
+                <div class="marquee-item">AWS</div>
+                <div class="marquee-item">Firebase</div>
+                <div class="marquee-item">Docker</div>
+                <div class="marquee-item">MongoDB</div>
+                <div class="marquee-item">Figma</div>
+                <div class="marquee-item">Vue.js</div>
+                <div class="marquee-item">TypeScript</div>
+                <div class="marquee-item">Next.js</div>
+                <div class="marquee-item">Cybersecurity</div>
+                <div class="marquee-item">AI / ML</div>
+                <div class="marquee-item">SEO</div>
+                <div class="marquee-item">React</div>
+                <div class="marquee-item">Node.js</div>
+                <div class="marquee-item">Python</div>
+                <div class="marquee-item">WordPress</div>
+                <div class="marquee-item">React Native</div>
+                <div class="marquee-item">AWS</div>
+                <div class="marquee-item">Firebase</div>
+                <div class="marquee-item">Docker</div>
+                <div class="marquee-item">MongoDB</div>
+                <div class="marquee-item">Figma</div>
+                <div class="marquee-item">Vue.js</div>
+                <div class="marquee-item">TypeScript</div>
+                <div class="marquee-item">Next.js</div>
+                <div class="marquee-item">Cybersecurity</div>
+                <div class="marquee-item">AI / ML</div>
+                <div class="marquee-item">SEO</div>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title fade-up">What We <span class="gradient-text">Build</span></h2>
+                <p class="section-subtitle fade-up">From concept to deployment, we handle every aspect of your tech needs with expertise and precision.</p>
+                <div class="services-grid">
+                    <div class="service-card clay fade-up">
+                        <div class="service-icon" style="background:linear-gradient(135deg,#667eea,#764ba2)" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Custom websites, web apps, e-commerce platforms, landing pages, portfolios, and SaaS products built with modern technologies.</p>
+                        <div class="service-tags">
+                            <span class="service-tag">React</span>
+                            <span class="service-tag">Next.js</span>
+                            <span class="service-tag">WordPress</span>
+                            <span class="service-tag">Shopify</span>
+                        </div>
+                    </div>
+                    <div class="service-card clay fade-up">
+                        <div class="service-icon" style="background:linear-gradient(135deg,#f093fb,#f5576c)" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+                        </div>
+                        <h3>App Development</h3>
+                        <p>Native and cross-platform mobile apps for iOS and Android. From MVP to full-scale products with beautiful UI/UX.</p>
+                        <div class="service-tags">
+                            <span class="service-tag">React Native</span>
+                            <span class="service-tag">Flutter</span>
+                            <span class="service-tag">iOS</span>
+                            <span class="service-tag">Android</span>
+                        </div>
+                    </div>
+                    <div class="service-card clay fade-up">
+                        <div class="service-icon" style="background:linear-gradient(135deg,#4ecdc4,#44a08d)" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                        </div>
+                        <h3>Cloud &amp; DevOps</h3>
+                        <p>Cloud architecture, server management, CI/CD pipelines, containerization, and infrastructure automation.</p>
+                        <div class="service-tags">
+                            <span class="service-tag">AWS</span>
+                            <span class="service-tag">GCP</span>
+                            <span class="service-tag">Docker</span>
+                            <span class="service-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                    <div class="service-card clay fade-up">
+                        <div class="service-icon" style="background:linear-gradient(135deg,#ffd93d,#ff6b6b)" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Cybersecurity</h3>
+                        <p>Security audits, penetration testing, vulnerability assessment, SSL setup, firewall configuration, and data protection.</p>
+                        <div class="service-tags">
+                            <span class="service-tag">Pen Testing</span>
+                            <span class="service-tag">SSL/TLS</span>
+                            <span class="service-tag">Firewall</span>
+                            <span class="service-tag">Audit</span>
+                        </div>
+                    </div>
+                    <div class="service-card clay fade-up">
+                        <div class="service-icon" style="background:linear-gradient(135deg,#a8e063,#56ab2f)" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>User research, wireframing, prototyping, and pixel-perfect designs that convert visitors into customers.</p>
+                        <div class="service-tags">
+                            <span class="service-tag">Figma</span>
+                            <span class="service-tag">Adobe XD</span>
+                            <span class="service-tag">Prototype</span>
+                            <span class="service-tag">Branding</span>
+                        </div>
+                    </div>
+                    <div class="service-card clay fade-up">
+                        <div class="service-icon" style="background:linear-gradient(135deg,#667eea,#f093fb)" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h3>IT Support &amp; Maintenance</h3>
+                        <p>24/7 technical support, server monitoring, bug fixing, updates, backups, and performance optimization.</p>
+                        <div class="service-tags">
+                            <span class="service-tag">24/7 Support</span>
+                            <span class="service-tag">Monitoring</span>
+                            <span class="service-tag">Updates</span>
+                            <span class="service-tag">Backup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="section" style="background:var(--bg-light)">
+            <div class="container">
+                <h2 class="section-title fade-up">Our <span class="gradient-text">Work</span></h2>
+                <p class="section-subtitle fade-up">Real projects, real results. See what we've built for our clients.</p>
+                <div class="portfolio-grid">
+
+                    <!-- SimpleClicks — Lead Generation Website -->
+                    <div class="portfolio-card clay fade-up">
+                        <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <div style="text-align:center;color:white;z-index:1;position:relative">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                <div style="font-size:var(--text-2xl);font-weight:700;font-family:'Space Grotesk',sans-serif;margin-top:8px">SimpleClicks</div>
+                            </div>
+                            <span class="portfolio-badge badge-live">Live</span>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>SimpleClicks — Market Lead Generation</h3>
+                            <div class="stars" aria-label="5 out of 5 stars rating">
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="stars-label">5.0 / 5.0</span>
+                            </div>
+                            <p>Built a high-converting lead generation website for Rahul. Includes optimised landing pages, lead capture forms, CRM integration, A/B testing setup, and analytics tracking to maximise conversion rates.</p>
+                            <div class="portfolio-tech" data-more="+2 more">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>CRM Integration</span>
+                                <span>Analytics</span>
+                            </div>
+                            <div class="review-text" tabindex="0">
+                                "DevNest completely transformed our lead generation. The landing pages convert like crazy and we saw a 3x increase in qualified leads within the first month. The CRM integration saves us hours every week. Absolutely worth every rupee — I'd give them 6 stars if I could."
+                                <div class="review-author">— Rahul, Founder of SimpleClicks</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-Commerce -->
+                    <div class="portfolio-card clay fade-up">
+                        <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <div style="text-align:center;color:white;z-index:1;position:relative">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                                <div style="font-size:var(--text-2xl);font-weight:700;font-family:'Space Grotesk',sans-serif;margin-top:8px">ShopVibe</div>
+                            </div>
+                            <span class="portfolio-badge badge-live">Live</span>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>ShopVibe — E-Commerce Platform</h3>
+                            <div class="stars" aria-label="5 out of 5 stars rating">
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="stars-label">5.0 / 5.0</span>
+                            </div>
+                            <p>Full-stack e-commerce solution with payment integration, inventory management, admin dashboard, and real-time analytics.</p>
+                            <div class="portfolio-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SaaS -->
+                    <div class="portfolio-card clay fade-up">
+                        <div class="portfolio-image" style="background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);">
+                            <div style="text-align:center;color:white;z-index:1;position:relative">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                                <div style="font-size:var(--text-2xl);font-weight:700;font-family:'Space Grotesk',sans-serif;margin-top:8px">DataPulse</div>
+                            </div>
+                            <span class="portfolio-badge badge-live">Live</span>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>DataPulse — SaaS Analytics Dashboard</h3>
+                            <div class="stars" aria-label="5 out of 5 stars rating">
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                                <span class="stars-label">5.0 / 5.0</span>
+                            </div>
+                            <p>Real-time analytics dashboard with interactive charts, user management, API integrations, and automated reporting.</p>
+                            <div class="portfolio-tech" data-more="+1 more">
+                                <span>Next.js</span>
+                                <span>TypeScript</span>
+                                <span>PostgreSQL</span>
+                                <span>Chart.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="section">
+            <div class="container">
+                <h2 class="section-title fade-up">How We <span class="gradient-text">Work</span></h2>
+                <p class="section-subtitle fade-up">Our proven 4-step process ensures every project is delivered on time, on budget, and beyond expectations.</p>
+                <div class="process-grid">
+                    <div class="process-card clay fade-up"><div class="process-number" aria-hidden="true">1</div><h3>Discovery</h3><p>We dive deep into your requirements, goals, target audience, and competitors to create the perfect strategy.</p></div>
+                    <div class="process-card clay fade-up"><div class="process-number" aria-hidden="true">2</div><h3>Design</h3><p>Our designers create beautiful wireframes and prototypes. We iterate until you're 100% satisfied with the look.</p></div>
+                    <div class="process-card clay fade-up"><div class="process-number" aria-hidden="true">3</div><h3>Develop</h3><p>Clean, scalable code built with modern best practices. Regular updates and demos throughout development.</p></div>
+                    <div class="process-card clay fade-up"><div class="process-number" aria-hidden="true">4</div><h3>Deploy &amp; Support</h3><p>Launch day and beyond. We handle deployment, monitoring, and provide ongoing maintenance and support.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="section" style="background:var(--bg-light)">
+            <div class="container">
+                <h2 class="section-title fade-up">Simple <span class="gradient-text">Pricing</span></h2>
+                <p class="section-subtitle fade-up">Transparent pricing with no hidden costs. Choose the plan that fits your needs.</p>
+                <div class="pricing-grid">
+                    <div class="pricing-card clay fade-up">
+                        <div class="pricing-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
+                        <h3>Starter</h3>
+                        <div class="pricing-price">₹4,999 <span>/ project</span></div>
+                        <p class="pricing-desc">Perfect for small businesses and personal projects</p>
+                        <ul class="pricing-features">
+                            <li>Single page website</li>
+                            <li>Mobile responsive</li>
+                            <li>Basic SEO setup</li>
+                            <li>Contact form</li>
+                            <li>1 revision round</li>
+                            <li>3 days delivery</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center">Get Started</a>
+                    </div>
+                    <div class="pricing-card clay fade-up featured">
+                        <div class="pricing-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                        <h3>Professional</h3>
+                        <div class="pricing-price">₹14,999 <span>/ project</span></div>
+                        <p class="pricing-desc">For growing businesses that need a strong online presence</p>
+                        <ul class="pricing-features">
+                            <li>Multi-page website (up to 8)</li>
+                            <li>Custom design &amp; animations</li>
+                            <li>Advanced SEO optimization</li>
+                            <li>CMS integration</li>
+                            <li>Performance optimization</li>
+                            <li>3 revision rounds</li>
+                            <li>7 days delivery</li>
+                            <li>30 days free support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center">Get Started</a>
+                    </div>
+                    <div class="pricing-card clay fade-up">
+                        <div class="pricing-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                        <h3>Enterprise</h3>
+                        <div class="pricing-price">Custom</div>
+                        <p class="pricing-desc">Full-scale custom solutions for enterprises</p>
+                        <ul class="pricing-features">
+                            <li>Custom web/app development</li>
+                            <li>Full-stack solution</li>
+                            <li>API development</li>
+                            <li>Cloud deployment</li>
+                            <li>Security implementation</li>
+                            <li>Unlimited revisions</li>
+                            <li>Priority support</li>
+                            <li>Dedicated project manager</li>
+                        </ul>
+                        <a href="https://wa.me/919549687691?text=Hi%20DevNest!%20I%20need%20a%20custom%20enterprise%20solution." class="btn btn-secondary" style="width:100%;justify-content:center" target="_blank" rel="noopener noreferrer">Let's Discuss</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="section">
+            <div class="container">
+                <h2 class="section-title fade-up">Client <span class="gradient-text">Feedback</span></h2>
+                <p class="section-subtitle fade-up">Don't just take our word for it — hear from the people we've worked with.</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card clay fade-up">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#667eea,#764ba2)">R</div>
+                            <div class="testimonial-info"><h3>Rahul</h3><span>Founder, SimpleClicks</span></div>
+                        </div>
+                        <div class="stars" aria-label="5 out of 5 stars">
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                        </div>
+                        <p>"DevNest built our lead generation site from scratch. The conversion-optimised landing pages and CRM integration work flawlessly. We saw a 3x jump in qualified leads within four weeks — hands down the best investment we made this year."</p>
+                    </div>
+                    <div class="testimonial-card clay fade-up">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c)">A</div>
+                            <div class="testimonial-info"><h3>Ankit Sharma</h3><span>CEO, TechVentures</span></div>
+                        </div>
+                        <div class="stars" aria-label="5 out of 5 stars">
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                        </div>
+                        <p>"DevNest built our entire SaaS platform from scratch. The code quality is exceptional and the team was incredibly responsive. They delivered on time and the post-launch support has been outstanding."</p>
+                    </div>
+                    <div class="testimonial-card clay fade-up">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar" style="background:linear-gradient(135deg,#4ecdc4,#44a08d)">P</div>
+                            <div class="testimonial-info"><h3>Priya Patel</h3><span>Owner, StyleBoutique</span></div>
+                        </div>
+                        <div class="stars" aria-label="5 out of 5 stars">
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                        </div>
+                        <p>"Our e-commerce store by DevNest is running smoothly. Sales increased 250% in the first quarter. The payment integration is seamless and the admin panel makes managing products effortless."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section id="blog" class="section" style="background:var(--bg-light)">
+            <div class="container">
+                <h2 class="section-title fade-up">From Our <span class="gradient-text">Blog</span></h2>
+                <p class="section-subtitle fade-up">Insights, tips, and tech wisdom from the DevNest team.</p>
+                <div class="blog-grid">
+                    <article class="blog-card clay fade-up">
+                        <div class="blog-image" style="background:linear-gradient(135deg,#667eea,#764ba2)">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta"><span>Dec 15, 2024</span><span>5 min read</span></div>
+                            <h3>Why Every Business Needs a Website in 2025</h3>
+                            <p>In today's digital-first world, not having a website is like not having a phone number. Learn why a professional website is the smartest business decision you'll make this year.</p>
+                            <a href="#" class="blog-link" onclick="showToast('Full article coming soon. Stay tuned.','success');return false;">Read More →</a>
+                        </div>
+                    </article>
+                    <article class="blog-card clay fade-up">
+                        <div class="blog-image" style="background:linear-gradient(135deg,#f093fb,#f5576c)">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta"><span>Dec 10, 2024</span><span>7 min read</span></div>
+                            <h3>10 Web Performance Tips That Triple Your Speed</h3>
+                            <p>Page speed directly impacts your SEO ranking and conversion rate. Here are 10 proven techniques we use at DevNest to make websites blazing fast.</p>
+                            <a href="#" class="blog-link" onclick="showToast('Full article coming soon. Stay tuned.','success');return false;">Read More →</a>
+                        </div>
+                    </article>
+                    <article class="blog-card clay fade-up">
+                        <div class="blog-image" style="background:linear-gradient(135deg,#4ecdc4,#44a08d)">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta"><span>Dec 5, 2024</span><span>6 min read</span></div>
+                            <h3>Cybersecurity Basics Every Business Owner Must Know</h3>
+                            <p>Cyber threats are evolving every day. From phishing to ransomware, learn the essential practices that protect your business data and customer trust.</p>
+                            <a href="#" class="blog-link" onclick="showToast('Full article coming soon. Stay tuned.','success');return false;">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title fade-up">Let's <span class="gradient-text">Talk</span></h2>
+                <p class="section-subtitle fade-up">Ready to bring your idea to life? Send us a message and we'll get back to you within 2 hours.</p>
+                <div class="contact-grid">
+                    <form class="contact-form clay-static fade-up" id="contactForm" novalidate>
+                        <div class="honeypot"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+                        <input type="hidden" id="formTimestamp" name="timestamp">
+
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required minlength="2" maxlength="100" autocomplete="name" aria-required="true">
+                            <div class="form-error" id="nameError">Please enter your full name (at least 2 characters)</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email" aria-required="true">
+                            <div class="form-error" id="emailError">Please enter a valid email address</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
+                            <div class="form-error" id="phoneError">Please enter a valid phone number</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed <span class="required">*</span></label>
+                            <select id="service" name="service" class="form-input" required aria-required="true">
+                                <option value="">Select a service...</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="app-development">App Development</option>
+                                <option value="ui-ux-design">UI/UX Design</option>
+                                <option value="cloud-devops">Cloud &amp; DevOps</option>
+                                <option value="cybersecurity">Cybersecurity</option>
+                                <option value="it-support">IT Support</option>
+                                <option value="seo">SEO &amp; Marketing</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="form-error" id="serviceError">Please select a service</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget" class="form-input">
+                                <option value="">Select budget range...</option>
+                                <option value="under-5k">Under ₹5,000</option>
+                                <option value="5k-15k">₹5,000 – ₹15,000</option>
+                                <option value="15k-50k">₹15,000 – ₹50,000</option>
+                                <option value="50k-1l">₹50,000 – ₹1,00,000</option>
+                                <option value="above-1l">Above ₹1,00,000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details <span class="required">*</span></label>
+                            <textarea id="message" name="message" class="form-input" placeholder="Tell us about your project, goals, and timeline..." required minlength="10" maxlength="2000" aria-required="true"></textarea>
+                            <div class="form-error" id="messageError">Please describe your project (at least 10 characters)</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;justify-content:center">Send Message</button>
+                        <p style="text-align:center;margin-top:12px;font-size:var(--text-sm);color:var(--c-text-muted)">We respond within 2 hours &middot; No spam, ever</p>
+                    </form>
+
+                    <div class="contact-info clay-static fade-up">
+                        <h3>Get in Touch</h3>
+                        <p>Have a project in mind? We're available around the clock and would love to hear about your ideas.</p>
+
+                        <a href="mailto:devofdevnest@gmail.com" class="contact-item" aria-label="Send email to DevNest">
+                            <div class="contact-item-icon" style="background:linear-gradient(135deg,#667eea,#764ba2)" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                            <div class="contact-item-text"><h3>Email Us</h3><span>devofdevnest@gmail.com</span></div>
+                        </a>
+
+                        <a href="https://wa.me/919549687691?text=Hi%20DevNest!%20I'm%20interested%20in%20your%20services." class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                            <div class="contact-item-icon" style="background:linear-gradient(135deg,#25D366,#128C7E)" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+                            <div class="contact-item-text"><h3>WhatsApp</h3><span>+91 95496 87691</span></div>
+                        </a>
+
+                        <a href="tel:+919549687691" class="contact-item" aria-label="Call DevNest">
+                            <div class="contact-item-icon" style="background:linear-gradient(135deg,#f093fb,#f5576c)" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                            <div class="contact-item-text"><h3>Call Us</h3><span>+91 95496 87691</span></div>
+                        </a>
+
+                        <div class="contact-item" style="cursor:default;">
+                            <div class="contact-item-icon" style="background:linear-gradient(135deg,#4ecdc4,#44a08d)" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                            <div class="contact-item-text"><h3>Response Time</h3><span>Within 2 hours, 24/7</span></div>
+                        </div>
+
+                        <div class="social-box">
+                            <h3>Follow Us</h3>
+                            <div class="social-links">
+                                <a href="#" class="btn btn-secondary" onclick="showToast('Coming soon!','success');return false;">GitHub</a>
+                                <a href="#" class="btn btn-secondary" onclick="showToast('Coming soon!','success');return false;">LinkedIn</a>
+                                <a href="#" class="btn btn-secondary" onclick="showToast('Coming soon!','success');return false;">Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card fade-up">
+                    <h2>Ready to Build Something Great?</h2>
+                    <p>Join 50+ clients who transformed their business with DevNest. Let's create something extraordinary together.</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/919549687691?text=Hi%20DevNest!%20I%20want%20to%20start%20a%20project." class="btn-cta-white" target="_blank" rel="noopener noreferrer">Start on WhatsApp</a>
+                        <a href="mailto:devofdevnest@gmail.com" class="btn-cta-outline">Email Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div style="display:flex;align-items:center;gap:10px">
+                        <div class="nav-logo-icon"><span>DN</span></div>
+                        <span style="font-family:'Space Grotesk',sans-serif;font-size:var(--text-2xl);font-weight:700;color:var(--c-text-inverse)">DevNest</span>
+                    </div>
+                    <p>Your premium tech partner for web development, app development, cloud solutions, cybersecurity, and complete IT support. We build digital experiences that matter.</p>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">App Development</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Cloud &amp; DevOps</a></li>
+                        <li><a href="#services">Cybersecurity</a></li>
+                        <li><a href="#services">IT Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:devofdevnest@gmail.com">devofdevnest@gmail.com</a></li>
+                        <li><a href="tel:+919549687691">+91 95496 87691</a></li>
+                        <li><a href="https://wa.me/919549687691" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DevNest. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" onclick="openModal('privacy');return false;">Privacy Policy</a>
+                    <a href="#" onclick="openModal('terms');return false;">Terms &amp; Conditions</a>
+                    <a href="/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919549687691?text=Hi%20DevNest!%20I%20need%20help%20with%20a%20project." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with DevNest on WhatsApp" title="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- Scroll Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+        <div class="cookie-content">
+            <p class="cookie-text">We use cookies to enhance your experience and analyse site traffic. By clicking "Accept," you consent to our use of cookies. Read our <a href="#" onclick="openModal('privacy');return false;">Privacy Policy</a> for details.</p>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept All</button>
+                <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal-overlay" id="privacyModal">
+        <div class="modal" role="dialog" aria-labelledby="privacyTitle">
+            <button class="modal-close" onclick="closeModal('privacy')" aria-label="Close privacy policy">
+                <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <h2 id="privacyTitle">Privacy Policy</h2>
+            <p><strong>Last Updated: December 15, 2024</strong></p>
+            <p>DevNest ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
+            <h3>1. Information We Collect</h3>
+            <p>We collect information you voluntarily provide when you:</p>
+            <ul><li>Fill out our contact form (name, email, phone, project details)</li><li>Subscribe to our newsletter</li><li>Communicate with us via email or WhatsApp</li></ul>
+            <p>We automatically collect certain information including IP address, browser type, operating system, referring URLs, and pages visited through cookies and analytics tools.</p>
+            <h3>2. How We Use Your Information</h3>
+            <ul><li>To respond to your inquiries and provide our services</li><li>To send project updates and relevant communications</li><li>To improve our website and services</li><li>To analyse website traffic and usage patterns</li><li>To protect against fraudulent or unauthorized activity</li></ul>
+            <h3>3. Information Sharing</h3>
+            <p>We do not sell, trade, or rent your personal information to third parties. We may share information with trusted service providers who assist us in operating our website, subject to confidentiality agreements.</p>
+            <h3>4. Data Security</h3>
+            <p>We implement industry-standard security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.</p>
+            <h3>5. Cookies</h3>
+            <p>Our website uses cookies to enhance user experience, analyse traffic, and remember your preferences. You can control cookies through your browser settings.</p>
+            <h3>6. Third-Party Services</h3>
+            <p>We may use third-party services such as Google Analytics. These services have their own privacy policies governing the use of your information.</p>
+            <h3>7. Your Rights</h3>
+            <ul><li>Access, update, or delete your personal information</li><li>Opt-out of marketing communications</li><li>Request a copy of your data</li><li>Lodge a complaint with a data protection authority</li></ul>
+            <h3>8. Children's Privacy</h3>
+            <p>Our services are not directed to individuals under 13. We do not knowingly collect personal information from children under 13.</p>
+            <h3>9. Changes to This Policy</h3>
+            <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.</p>
+            <h3>10. Contact Us</h3>
+            <p>If you have questions about this Privacy Policy, please contact us:</p>
+            <ul><li>Email: devofdevnest@gmail.com</li><li>WhatsApp: +91 95496 87691</li></ul>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal-overlay" id="termsModal">
+        <div class="modal" role="dialog" aria-labelledby="termsTitle">
+            <button class="modal-close" onclick="closeModal('terms')" aria-label="Close terms and conditions">
+                <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <h2 id="termsTitle">Terms &amp; Conditions</h2>
+            <p><strong>Last Updated: December 15, 2024</strong></p>
+            <p>Welcome to DevNest. By accessing and using our website and services, you agree to be bound by these Terms and Conditions.</p>
+            <h3>1. Services</h3>
+            <p>DevNest provides freelance technology services including web development, app development, UI/UX design, cloud solutions, cybersecurity, and IT support. All services are subject to a separate project agreement.</p>
+            <h3>2. Project Agreements</h3>
+            <ul><li>All projects require a written agreement or confirmation via email/WhatsApp</li><li>Project scope, timeline, and pricing will be defined before work begins</li><li>Changes to scope may result in additional charges and timeline adjustments</li></ul>
+            <h3>3. Payment Terms</h3>
+            <ul><li>Payment terms will be specified in individual project agreements</li><li>A deposit of 50% is typically required before work commences</li><li>Final payment is due upon project completion and before final deliverables</li><li>Late payments may incur additional charges</li></ul>
+            <h3>4. Intellectual Property</h3>
+            <ul><li>Upon full payment, all custom-developed code and designs become the client's property</li><li>Third-party tools and licences remain subject to their respective terms</li><li>DevNest retains the right to showcase completed projects in our portfolio unless otherwise agreed</li></ul>
+            <h3>5. Revisions &amp; Support</h3>
+            <ul><li>The number of revision rounds is specified in each package/agreement</li><li>Additional revisions beyond the agreed scope may incur extra charges</li><li>Post-launch support duration is specified in the project agreement</li></ul>
+            <h3>6. Client Responsibilities</h3>
+            <ul><li>Provide necessary content, assets, and feedback in a timely manner</li><li>Ensure all provided content does not infringe on third-party rights</li><li>Maintain backups of their own data and content</li></ul>
+            <h3>7. Limitation of Liability</h3>
+            <p>DevNest shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services. Our total liability shall not exceed the amount paid for the specific service.</p>
+            <h3>8. Termination</h3>
+            <p>Either party may terminate a project agreement with written notice. The client is responsible for payment of all work completed up to the termination date.</p>
+            <h3>9. Confidentiality</h3>
+            <p>Both parties agree to maintain the confidentiality of any proprietary information shared during the course of a project.</p>
+            <h3>10. Dispute Resolution</h3>
+            <p>Any disputes shall be resolved through good-faith negotiation. If negotiation fails, disputes will be subject to the jurisdiction of courts in India.</p>
+            <h3>11. Modifications</h3>
+            <p>DevNest reserves the right to modify these terms at any time. Continued use of our services constitutes acceptance of modified terms.</p>
+            <h3>12. Contact</h3>
+            <p>For questions regarding these Terms &amp; Conditions:</p>
+            <ul><li>Email: devofdevnest@gmail.com</li><li>WhatsApp: +91 95496 87691</li></ul>
+        </div>
+    </div>
+
+    <script>
+        // Force HTTPS
+        if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+            location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+        }
+
+        // Loader
+        window.addEventListener('load', function() {
+            setTimeout(function() { document.getElementById('loader').classList.add('hidden'); }, 1800);
+        });
+
+        // Navbar scroll
+        var navbar = document.querySelector('.navbar');
+        var scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', function() {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+            updateActiveLink();
+        });
+
+        scrollTopBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+        function updateActiveLink() {
+            var sections = document.querySelectorAll('section[id]');
+            var scrollPos = window.scrollY + 100;
+            sections.forEach(function(section) {
+                var top = section.offsetTop;
+                var height = section.offsetHeight;
+                var id = section.getAttribute('id');
+                var link = document.querySelector('.nav-links a[href="#' + id + '"]');
+                if (link) {
+                    if (scrollPos >= top && scrollPos < top + height) {
+                        document.querySelectorAll('.nav-links a:not(.btn)').forEach(function(a) { a.classList.remove('active'); });
+                        link.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // Mobile nav
+        var hamburger = document.querySelector('.hamburger');
+        var mobileNav = document.querySelector('.mobile-nav');
+        var mobileOverlay = document.querySelector('.mobile-overlay');
+
+        hamburger.addEventListener('click', function() {
+            var isActive = hamburger.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isActive);
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+
+        mobileOverlay.addEventListener('click', closeMobileNav);
+        document.querySelectorAll('.mobile-nav a').forEach(function(link) { link.addEventListener('click', closeMobileNav); });
+
+        function closeMobileNav() {
+            hamburger.classList.remove('active');
+            mobileNav.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+
+        // Scroll animations
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+
+        // Cookie consent
+        function showCookieBanner() {
+            document.getElementById('cookieBanner').classList.add('show');
+            document.body.classList.add('cookie-visible');
+        }
+        function hideCookieBanner() {
+            document.getElementById('cookieBanner').classList.remove('show');
+            document.body.classList.remove('cookie-visible');
+        }
+        function initCookieBanner() {
+            if (!localStorage.getItem('cookieConsent')) { setTimeout(showCookieBanner, 2500); }
+        }
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            hideCookieBanner();
+            initAnalytics();
+            showToast('Cookie preferences saved.', 'success');
+        }
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            hideCookieBanner();
+            showToast('Cookie preferences saved.', 'success');
+        }
+        initCookieBanner();
+
+        // Analytics
+        function initAnalytics() {
+            var analytics = {
+                pageViews: parseInt(localStorage.getItem('dn_pageViews') || '0') + 1,
+                lastVisit: new Date().toISOString(),
+                referrer: document.referrer || 'direct',
+                screenSize: screen.width + 'x' + screen.height,
+                page: window.location.pathname
+            };
+            localStorage.setItem('dn_pageViews', analytics.pageViews);
+            localStorage.setItem('dn_analytics', JSON.stringify(analytics));
+
+            var timeOnPage = 0;
+            setInterval(function() { timeOnPage++; localStorage.setItem('dn_timeOnPage', timeOnPage); }, 1000);
+
+            document.addEventListener('click', function(e) {
+                var target = e.target.closest('a, button');
+                if (target) {
+                    var clicks = JSON.parse(localStorage.getItem('dn_clicks') || '[]');
+                    clicks.push({ element: target.textContent.trim().substring(0, 50), href: target.href || '', time: new Date().toISOString() });
+                    if (clicks.length > 100) clicks.shift();
+                    localStorage.setItem('dn_clicks', JSON.stringify(clicks));
+                }
+            });
+        }
+        if (localStorage.getItem('cookieConsent') === 'accepted') { initAnalytics(); }
+
+        // Modal
+        function openModal(type) {
+            var modal = document.getElementById(type + 'Modal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            var closeBtn = modal.querySelector('.modal-close');
+            if (closeBtn) closeBtn.focus();
+        }
+        function closeModal(type) {
+            document.getElementById(type + 'Modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) { overlay.classList.remove('active'); document.body.style.overflow = ''; }
+            });
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(function(m) { m.classList.remove('active'); });
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Toast
+        function showToast(message, type) {
+            type = type || 'success';
+            var toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast toast-' + type + ' show';
+            setTimeout(function() { toast.classList.remove('show'); }, 4000);
+        }
+
+        // Form validation
+        var contactForm = document.getElementById('contactForm');
+        document.getElementById('formTimestamp').value = Date.now();
+
+        var formInputs = contactForm.querySelectorAll('.form-input[required]');
+        formInputs.forEach(function(input) {
+            input.addEventListener('blur', function() { validateField(input); });
+            input.addEventListener('input', function() { if (input.classList.contains('error')) validateField(input); });
+        });
+
+        function validateField(field) {
+            var value = field.value.trim();
+            var isValid = true;
+            switch(field.id) {
+                case 'name': isValid = value.length >= 2; break;
+                case 'email': isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value); break;
+                case 'service': isValid = value !== ''; break;
+                case 'message': isValid = value.length >= 10; break;
+            }
+            if (field.id === 'phone' && value) isValid = /^[\+]?[\d\s\-()]{7,20}$/.test(value);
+            if (!isValid && (field.required || (field.id === 'phone' && value))) {
+                field.classList.add('error'); field.classList.remove('success');
+            } else {
+                field.classList.remove('error'); if (value) field.classList.add('success');
+            }
+            return isValid;
+        }
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (document.getElementById('website').value) { showToast('Submission blocked.', 'error'); return; }
+            var timestamp = parseInt(document.getElementById('formTimestamp').value);
+            if (Date.now() - timestamp < 3000) { showToast('Please take your time filling out the form.', 'error'); return; }
+
+            var allValid = true;
+            formInputs.forEach(function(input) { if (!validateField(input)) allValid = false; });
+            var phoneField = document.getElementById('phone');
+            if (phoneField.value.trim() && !validateField(phoneField)) allValid = false;
+
+            if (!allValid) {
+                showToast('Please fix the errors in the form.', 'error');
+                var firstError = contactForm.querySelector('.error');
+                if (firstError) firstError.focus();
+                return;
+            }
+
+            var formData = {
+                name: document.getElementById('name').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                service: document.getElementById('service').value,
+                budget: document.getElementById('budget').value,
+                message: document.getElementById('message').value.trim()
+            };
+
+            var submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            setTimeout(function() {
+                var mailtoLink = 'mailto:devofdevnest@gmail.com?subject=New Project Inquiry from ' +
+                    encodeURIComponent(formData.name) +
+                    '&body=' + encodeURIComponent(
+                        'Name: ' + formData.name + '\nEmail: ' + formData.email + '\nPhone: ' + formData.phone +
+                        '\nService: ' + formData.service + '\nBudget: ' + formData.budget + '\n\nMessage:\n' + formData.message
+                    );
+
+                showToast('Message sent successfully! We will reach out within 2 hours.', 'success');
+                contactForm.reset();
+                document.getElementById('formTimestamp').value = Date.now();
+                contactForm.querySelectorAll('.form-input').forEach(function(i) { i.classList.remove('success', 'error'); });
+
+                setTimeout(function() { window.location.href = mailtoLink; }, 1000);
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }, 1500);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var href = this.getAttribute('href');
+                if (href === '#' || href === '') return;
+                var target = document.querySelector(href);
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+
+        // Keyboard accessibility
+        document.addEventListener('keydown', function(e) { if (e.key === 'Tab') document.body.classList.add('keyboard-nav'); });
+        document.addEventListener('mousedown', function() { document.body.classList.remove('keyboard-nav'); });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "DevNest",
+        "description": "Premium freelancing agency offering web development, app development, cloud solutions, cybersecurity, and IT support services.",
+        "url": "https://devnest.agency",
+        "logo": "https://devnest.agency/logo.png",
+        "image": "https://devnest.agency/og-image.png",
+        "email": "devofdevnest@gmail.com",
+        "telephone": "+919549687691",
+        "priceRange": "$$",
+        "address": { "@type": "PostalAddress", "addressCountry": "IN" },
+        "sameAs": [],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "DevNest Services",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Development" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cloud and DevOps" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cybersecurity" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IT Support" } }
+            ]
+        },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "ratingCount": "50", "bestRating": "5" }
+    }
+    </script>
+</body>
+</html>
